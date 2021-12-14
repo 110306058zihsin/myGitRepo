@@ -1,0 +1,19 @@
+
+	.body{font-family:sans-serif;}
+		.p{font-size: 15pt;}
+		.em{font-weight: bold;color:blue;text-decoration: underline;}
+		.span{color: red;border: 1px solid green;}
+		.extra span{color: inherit;}
+		.ul{margin-left: 20px;}
+		.div{border: 1px solid black;
+			margin-top: 50px;margin-right: 150px;margin-bottom: 50px;margin-left: 150px;
+			background-color: skyblue;}
+
+		.margin1{border: 1px solid purple;margin-left: 150px;}
+
+		.margin2{border: 1px solid green;margin-right: 150px;}
+		.float{float: left;padding: 15px;width: 50%;} 
+		.rows{display: table;clear: both;}
+		
+			
+	

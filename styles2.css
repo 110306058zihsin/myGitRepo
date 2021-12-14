@@ -1,0 +1,13 @@
+
+			
+
+		.body{font-family:sans-serif,cursive;font-size: 12pt;}
+		.em{font-weight: bold;color:blue;text-decoration: underline;}
+		.ti{background-color: yellow;}
+		.span{color: yellow;border: 2px solid green;}
+		.extra span{color: inherit;}
+		.style{border:3px  #cccccc solid ;margin-left: 50%;}
+		.picture1{z-index: 1;position: absolute;max-width: 50%}
+		.picture2{border: 2px solid green;width: 40%;height: 30%;margin-top: 50px;margin-bottom: 50px;}
+		.style2{border:2px solid red;text-align: center;background-image: url('background.png');background-position:center center ;background-repeat: no-repeat;background-attachment: scroll;}
+
