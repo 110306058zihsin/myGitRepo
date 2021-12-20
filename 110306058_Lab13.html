@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+	</title>
+</head>
+<body>
+	<link rel="styleSheet" href="style13.css">
+	<div align="center" >
+		<div align="centr" class="panelStyle">
+			<h1>JS Calculator</h1>
+			Number1<br>
+			<input type="text" class="text" id="input1"><br>
+			Number2<br>
+			<input type="text" class="text" id="input2"><br>
+			Operate way?<br>
+			<select name="operate" class="text" id="operate">
+				<option value="+" id="plus">+</option>
+				<option value="-" id="minus">-</option>
+				<option value="*" id="multiply">*</option>
+				<option value="/" id="divide">/</option>
+			</select>
+			<p>
+			<button value="Add" class="addButton" id="button" onclick="run()">Add</button>
+			<button value="reset" onclick="reset()">reset</button>
+			<div id="resultDiv"></div>
+
+		</div>
+	</div>
+	<script>
+		
+
+		
+		
+		
+		var result=0;
+		var text;
+		var currentDiv=document.getElementById("resultDiv");
+		
+		
+		
+
+		function run(){
+			var num1=parseInt(document.getElementById("input1").value);
+		var num2=parseInt(document.getElementById("input2").value);
+		var myselect=document.getElementById("operate");
+		var index=myselect.selectedIndex ;
+			
+			 if(myselect.options[index].value=="+"){
+			 	result=num1+num2;
+			 }else if(myselect.options[index].value=="-"){
+			 	result=num1-num2;
+		
+			 }else if(myselect.options[index].value=="*"){
+			 	result=num1*num2;
+			 }else if(myselect.options[index].value=="/"){
+			 	result=num1/num2;
+			 }
+			var resultNum=document.createElement("div");
+		    text=document.createTextNode("Result = "+ result);
+			resultNum.appendChild(text);
+			currentDiv.appendChild(resultNum);
+		}
+
+		
+		
+		function reset(){
+			document.getElementById("resultDiv").innerHTML="";
+			document.getElementById("input1").value="";
+			document.getElementById("input2").value="";
+		}
+
+
+
+	</script>		
+
+</body>
+</html>

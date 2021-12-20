@@ -10,12 +10,13 @@
 	var rand=Math.floor((Math.random()*10)+1);
 	var num;
 	num=window.prompt("guess the number!");
+
 	while(num>10){
 		num=window.prompt("Out of the range.");
 	}
 	while(num!=rand){
 		num=window.prompt("Wrong,try again!");
-		if(num=rand){
+		if(num==rand){
 			document.writeln("<h1>yeahhhhhh</h1>");
 		}
 		
