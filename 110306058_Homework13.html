@@ -17,7 +17,7 @@
 				Your Guess(1~100)<br>
 				<input type="text" class="text"  id="inputNumber">
 				<p>
-				<button value="Play" class="fill" id="button" onclick="run()">PLAY</button> 
+				<button value="Play"  id="button" onclick="run()">PLAY</button> 
 				<div class="result" id="div1">Result</div>
 		</div>	
 	</div>
@@ -33,26 +33,31 @@
 			var newDiv=document.createElement("div");
 
 			var num=document.getElementById("inputNumber").value;
+			if(num>biggestNum||num<smallestNum){
+				reset();
+
+			}else{
 			
-			if(num==rand){
+				if(num==rand){
 				alert('BOOM!');
-			}
-			else{
+				}
+				else{
 				
 					if(num>rand){
 					biggestNum=num;
-				text=document.createTextNode(smallestNum+"~"+biggestNum);
-				newDiv.appendChild(text);
+					text=document.createTextNode(smallestNum+"~"+biggestNum);
+					newDiv.appendChild(text);
 				
-			}else if(num<rand){
-				smallestNum=num;
-				text=document.createTextNode(smallestNum+"~"+biggestNum);
-				newDiv.appendChild(text);
+				}else if(num<rand){
+					smallestNum=num;
+					text=document.createTextNode(smallestNum+"~"+biggestNum);
+					newDiv.appendChild(text);
 				
+				}
+				var currentDiv=document.getElementById("div1");
+				currentDiv.appendChild(newDiv);
+				reset();
 			}
-			var currentDiv=document.getElementById("div1");
-			currentDiv.appendChild(newDiv);
-			reset();
 				
 
 		}
